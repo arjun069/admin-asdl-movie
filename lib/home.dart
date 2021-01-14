@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     Text("Name: " + lists[index]["name"]),
-                                    Image.network(lists[index]["url"]),
+                                    // Image.network(lists[index]["url"]),
                                     Text("Age: " + lists[index]["url"]),
                                     Text("Type: " + lists[index]["type"]),
                                     Text("thisorthat : " +
@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text("Name: " + lists[index]["name"]),
-                                  Image.network(lists[index]["url"]),
+                                  // Image.network(lists[index]["url"]),
                                   Text("Age: " + lists[index]["url"]),
                                   Text("Type: " + lists[index]["type"]),
                                   Text("thisorthat : " +
