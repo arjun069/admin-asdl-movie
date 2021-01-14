@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Register Pet'),
+      home: MyHomePage(title: 'Admin Panel For Adding Movies'),
     );
   }
 }
@@ -72,6 +72,7 @@ class _RegisterPetState extends State<RegisterPet> {
   String dropdownValuethis = 'Current';
   final nameController = TextEditingController();
   final urlController = TextEditingController();
+  final priceController = TextEditingController();
   final dbRef = FirebaseDatabase.instance.reference().child("movies");
   final dbRefupcoming =
       FirebaseDatabase.instance.reference().child("upcomingmovies");
@@ -126,6 +127,26 @@ class _RegisterPetState extends State<RegisterPet> {
               validator: (value) {
                 if (value.isEmpty) {
                   return 'Please select movie language';
+                }
+                return null;
+              },
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: TextFormField(
+              keyboardType: TextInputType.number,
+              controller: priceController,
+              decoration: InputDecoration(
+                labelText: "Enter price for movie",
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              // The validator receives the text that the user has entered.
+              validator: (value) {
+                if (value.isEmpty) {
+                  return 'Please enter price';
                 }
                 return null;
               },
@@ -194,6 +215,7 @@ class _RegisterPetState extends State<RegisterPet> {
                           dbRef.push().set({
                             "name": nameController.text,
                             "url": urlController.text,
+                            "price": priceController.text,
                             "type": dropdownValue,
                             "thisorthat": dropdownValuethis,
                           }).then((_) {
@@ -211,6 +233,7 @@ class _RegisterPetState extends State<RegisterPet> {
                           dbRefupcoming.push().set({
                             "name": nameController.text,
                             "url": urlController.text,
+                            "price": priceController.text,
                             "type": dropdownValue,
                             "thisorthat": dropdownValuethis,
                           }).then((_) {
