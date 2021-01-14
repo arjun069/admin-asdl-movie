@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "876147401558",
+    "project_id": "asdl-lab",
+    "storage_bucket": "asdl-lab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876147401558:android:89db27d524152f8a9eecf7",
+        "android_client_info": {
+          "package_name": "co.developerx.asdl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876147401558-c5dveorcdl4gjuokicpac4ubeingqorr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "co.developerx.asdl",
+            "certificate_hash": "05570dca5ba1d76ed0d6c288ae1107501ced3bd8"
+          }
+        },
+        {
+          "client_id": "876147401558-rtv8v4ac2bbj2q7qo1r1ks4luqgpl4t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCavJX_6QU3U-bQkImeTESJmjncAov6YZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876147401558-rtv8v4ac2bbj2q7qo1r1ks4luqgpl4t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
